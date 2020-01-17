@@ -14,8 +14,13 @@ public class ApplicationController {
     private final NumberService numberService;
 
     @GetMapping
-    public void get() {
+    public void printMethod() {
         numberService.printNumbers();
+    }
+
+    @GetMapping("add")
+    public void addMethod(){
+        numberService.add(1, 1);
     }
 
 }
